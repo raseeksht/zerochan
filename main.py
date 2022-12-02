@@ -56,7 +56,8 @@ class ZeroChan:
         os.system(f"wget -q --show-progress {self._hurl}{url} -O {location}/{url.split('/')[-1]}")
         # print(url)
 
-downloadLocation = "downloads"
+with open("downloadLocation.txt") as f:
+    downloadLocation = f.read().strip()
 
 zchan = ZeroChan(url,downloadLocation)
 zchan.start()
