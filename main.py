@@ -3,8 +3,23 @@ from bs4 import BeautifulSoup
 import threading
 import os
 
-url = "https://www.zerochan.net/Kamisato+Ayaka?q=Kamisato+Ayaka"
-# url  = input("url: ")
+loginurl = "https://www.zerochan.net/login"
+
+# requests = requests.session()
+# resp = requests.post(loginurl,{
+#     'ref':'/',
+#     'name':'raseekshrestha',
+#     'password':'onichan',
+#     'login':'Login'
+#     }
+# )
+
+
+# print(resp.headers)
+# exit()
+
+# url = "https://www.zerochan.net/Kamisato+Ayaka?q=Kamisato+Ayaka"
+url  = input("zerochan url: ")
 
 class ZeroChan:
     def __init__(self,url,downloadLocation):
